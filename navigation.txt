@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        .navbar
+        {
+            background-color: black;
+            border-radius: 30px;
+        }
+        .navbar ul
+        {
+            overflow: auto;
+        }
+        .navbar li
+        {
+            float:left;
+            list-style: none;
+            margin: 15px 20px;
+        }
+        .navbar li a
+        {
+            padding: 3px 3px;
+            text-decoration: none;
+            color:blanchedalmond
+        }
+        .navbar li a:hover
+        {
+            color:crimson;
+        }
+        .search
+        {
+            float:right;
+            color:blanchedalmond;
+            padding: 15px 75px;
+        }
+        .navbar input
+        {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a>Home</li>
+                <li><a href="">About</a>About</li>
+                <li><a href="">Services</a>Services</li>
+                <li><a href="">Contact us</a>Contact us</li>
+                <div class="search">
+                    <input type="text" name="search" placeholder="search here">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="table">
+        <h1>Hello World</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8OL-BEEs5vY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="https://mumbaimirror.indiatimes.com/thumb/64240689.cms?resizemode=4&width=400" />
+        <br/>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, placeat! Necessitatibus et officiis tempore, est quos, dolore deleniti fugit, numquam vitae dicta molestias! Est quidem magnam, pariatur voluptatum dolore delectus.
+    </div>
+</body>
+</html>

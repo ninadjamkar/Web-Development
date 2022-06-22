@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        .container
+        {
+            height: 600px;
+            width: 1400px;
+            border: 5px solid brown;
+            border-radius: 15px;
+            display:flex;
+            background-color: rgb(181, 253, 109);
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .item
+        {
+            position: relative;
+            width: 215px;
+            height: 215px;
+            background-color: coral;
+            border: 4px solid black;
+            margin:10px;
+            padding:5px;
+            border-radius: 15px;
+            text-align: center;
+
+            animation-name: ninad1;
+            animation-name: ninad2;
+            animation-duration: 4s;
+            animation-iteration-count: 1;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-in-out;
+            animation-delay: 5s;
+            animation-direction: reverse;
+        }
+        @keyframes ninad1 
+        {
+            from
+            {
+                width:200px;
+            }
+            to 
+            {
+                width:300px;
+            }
+        }
+        @keyframes ninad2
+        {
+            0%
+            {
+                top: 0px;
+                left: 250px;
+            }
+            25%
+            {
+                top: 250px;
+                left: 0px'
+            }
+            50%
+            {
+                top: 250px;
+                left: 250px;
+            }
+            100%
+            {
+                top: 0px;
+                left: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item-1">1st box - Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quis quo explicabo atque et nemo voluptates aperiam odit at? Commodi a eveniet nulla molestiae nihil delectus recusandae qui fuga maiores.</div>
+
+        <div class="item" id="item-2">2nd box - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam adipisci in, similique odio, et eum quae veritatis illo nostrum, ipsum labore sed voluptas aspernatur aliquam molestias modi eligendi quibusdam quas.</div>
+
+        <div class="item" id="item-3">3rd box - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus recusandae consectetur eligendi quisquam eveniet? Et, quis neque laboriosam ipsa numquam eveniet voluptatem a at earum minus consequatur ea facilis. Non.</div>
+
+        <div class="item" id="item-4">4th box - Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur id labore ratione, temporibus eos quis officiis adipisci non iure hic veniam excepturi ducimus ex eligendi perferendis dolorum ea ipsa quos.</div>
+
+        <div class="item" id="item-5">5th box - Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis sed voluptates ad labore veniam, voluptas itaque nobis, aliquam reprehenderit beatae rem soluta repellendus ipsam quam, eligendi officiis laboriosam ipsum. Iure.</div>
+    </div>
+</body>
+</html>

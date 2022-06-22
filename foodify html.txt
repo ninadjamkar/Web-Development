@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodify</title>
+    <link rel="stylesheet" href="Foodify.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="https://cdn.dribbble.com/users/143715/screenshots/1037256/foodifydribbble.jpg" height="78" width="85" />
+            <div style="color:rgb(55, 23, 23)">
+                <b>Foodify</b>
+            </div>
+        </div>
+        <div class="center">
+            <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Blogs</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Contact us</a></li>
+
+                <div class="search">
+                    <input type="text" name="search" placeholder="search dish/restaurant">
+                </div>
+            </ul>
+        </nav>
+        </div>
+        <div class="right">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png" height="50" width="50"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" height="50" width="50"/>
+            <img src="https://westwind.org/wp-content/uploads/2018/11/facebook-logo-png.png" height="50" width="50"/>
+        </div>
+        <section id="home">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1 class="h-primary">Welcome to FOODIFY</h1>
+            <p><b>A hungry must not go to food, the food will go to hungry.</b></p>
+            <p><b>Yummy food which will please your time, money, and tummy.</b></p>
+            <p><b>Hot, tasty food will reach you in 20 mins.</b></p>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <button class="btn">ORDER NOW</button>
+        </section>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <section class="service-container">
+            <h1 class="h-primary center">Our Services</h1>
+            <div id="services">
+                <div class="box">
+                    <img src="https://hire4event.com/blogs/wp-content/uploads/2020/02/best-catering-service-for-corporate-events.jpg" />
+                    <h2 class="h-secondary center">Catering</h2>
+                    <p><b>Making your guest more delighted with our food</b></p>
+                    <p class="center">With dedicated special event catering service & party planning, we assure to make your event a memorable & impressive event.</p>
+                </div> 
+                <div class="box">
+                    <img src="https://jedloapp.in/wp-content/uploads/2020/08/about-jedlo.jpg" />
+                    <h2 class="h-secondary center">Door Dash</h2>
+                    <p><b>Restaurants & more, delivered to your home</b></p>
+                    <p class="center">Best restaurants, best cooks and best delivery guys are all at your service. Eat the food you dream about at affordable prices within 20 mins.</p>
+                </div> 
+                <div class="box">
+                    <img src="https://www.foodnavigator-usa.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/foodnavigator-usa.com/article/2019/03/27/merchandising-fresh-produce-shoppers-seek-more-snack-sized-and-local-options/9303073-1-eng-GB/Merchandising-fresh-produce-Shoppers-seek-more-snack-sized-and-local-options.jpg" />
+                    <h2 class="h-secondary center">Fruits & Vegtables</h2>
+                    <p><b>veggies and fruits under one roof</b></p>
+                    <p class="center">Fruits & vegetables are an excellent source of vitamins and minerals. Get Fresh fruits and vegetables at your home within 20 mins.</p>
+                </div>         
+            </div>             
+        </section>
+        <br/>
+        <br/>
+        <section id="client-section">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1 class="h-primary center">Our Sponsers</h1>
+            <div id="clients">
+                 <div class="client-item">
+                    <img src="https://www.bluetext.com/wp-content/uploads/2017/12/mindtreelogo.jpg" width="200" />
+                 </div>
+                 <div class="client-item">
+                    <img src="https://i0.wp.com/shareable.pk/wp-content/uploads/2021/03/Abbot.jpg?fit=960%2C576&ssl=1" width="200" />
+                 </div>
+                 <div class="client-item">
+                    <img src="https://www.environmental-expert.com/files/20850/images/20850_0_202007221912142842832.jpg" width="200" />
+                 </div>
+                 <div class="client-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaXYeyOIrWDTFwV00lg5xf5ka9iwAWsMzxluHFLZPUYAU3q2-urBXSzmZLmlUDBN435mg&usqp=CAU" width="200" />
+                 </div>
+                 <div class="client-item">
+                    <img src="https://spiderimg.amarujala.com/assets/images/2019/05/13/750x506/i_1557747165.jpeg" width="150" />
+                 </div>
+            </div>
+        </section>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <div class="login">
+                <b>Join Foodify now</b>
+                <br/>
+                <br/>
+                log in / sign up
+                <br/>
+                <br/>
+                <form>
+                    <div class="form">
+                        <div class="form-group">
+                            <lable>Name         :<input type="text" name="" placeholder="Enter your name"></lable>
+                        </div>
+                        <div class="form-group">
+                            <lable>E Mail ID    :<input type="text" name="" placeholder="Enter your e mail id"></lable>
+                            <br/>
+                        </div>
+                        <div class="form-group">
+                            <lable>Phone number :<input type="number" name="" placeholder="Enter your phone number"></lable>
+                            <br/>
+                        </div>
+                        <div class="form-group">
+                            <lable>Password     :<input type="password" name="" placeholder="Enter your password"></lable>
+                            <br/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="button">
+                        <button>SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+            <div class="image">
+                <img src="https://thumbs.dreamstime.com/b/google-play-app-store-icons-download-google-pay-google-play-app-store-icons-editable-vector-illustration-isolated-white-177051728.jpg" height="100" width="100" />
+            </div>
+        <footer>
+            <div class="center">
+                Copyright &copy; www.foodify.com. All rights reserved
+            </div>
+        </footer>
+</body>
+</html>

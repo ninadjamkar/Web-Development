@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ninad's Resume</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        * {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .container {
+            width: 1500px;
+            height: 935px;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 3px;
+            display: flex;
+            background-color: rgb(190, 235, 220);
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            justify-content: space-around;
+        }
+
+        .container2 {
+            width: 820px;
+            height: 875px;
+            border: 2px solid rgb(190, 235, 220);
+            border-radius: 3px;
+            display: flex;
+            background-color: rgb(190, 235, 220);
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            flex-direction: column;
+        }
+
+        #name {
+            text-align: center;
+        }
+
+        .item {
+            position: relative;
+            width: 510px;
+            height: 800px;
+            background-color: rgb(177, 185, 200);
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 15px;
+            padding: 10px 10px;
+            margin-bottom: 65px;
+            font-size: large;
+        }
+
+        #item-2 {
+            height: 180px;
+            width: 700px;
+            margin-bottom: 65px;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: rgb(253, 193, 150);
+        }
+
+        #item-3 {
+            height: 180px;
+            width: 700px;
+            margin-bottom: 65px;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: rgb(253, 193, 150);
+        }
+
+        #item-4 {
+            height: 320px;
+            width: 700px;
+            margin-bottom: 65px;
+            font-size: large;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            background-color: rgb(253, 193, 150);
+        }
+
+        .Name {
+            text-align: center;
+        }
+
+        #ab {
+            text-align: center;
+        }
+
+        #cd {
+            text-align: center;
+        }
+
+        #image {
+            text-align: center;
+        }
+
+        #edu {
+            text-align: center;
+        }
+
+        .blog {
+            text-align: center;
+        }
+
+        .foot {
+            border: 2px solid rgb(39, 39, 40);
+            background-color: rgb(39, 39, 40);
+            text-align: center;
+            font-size: large;
+            width: 1520px;
+        }
+
+        .foot-img {
+            cursor: pointer;
+        }
+
+        #copy {
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class=" container-fluid">
+            <a class="navbar-brand" href="#">NINAD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog .html" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Characteristics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Skills</a></li>
+                            <li><a class="dropdown-item" href="#">Education</a></li>
+                            <li><a class="dropdown-item" href="#">Hobbies</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="Name">
+        <h1 id="Name">Ninad Jamkar</h1>
+    </div>
+    <div class="container">
+        <div class="item" id="item-1">
+            <div id="image">
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQEBVrIOGTDAcg/profile-displayphoto-shrink_800_800/0/1654502970257?e=1663200000&v=beta&t=y7iVdb-wqVnYc-pJAOT3ta9_ciAeXmjdNB3UP-35Npw"
+                    class="bd-placeholder-img rounded-circle" height="220" width="220" />
+            </div>
+            <br>
+            <h3 id="ab">About Me</h3>
+            <br>
+            I am currently pursuing <b>B Tech </b>(2nd year) in <b>Computer Science</b> from <b>SVKM's NMIMS, Navi
+                Mumbai.</b> I
+            am interested in the field of Finance and Technology. I am a Fullstack and Data Science enthusiast &
+            currently working as a Web Development inter with <a href="https://www.collegeranker.in/"
+                target="_blank">College Ranker</a>. I am
+            keen to learn various Technical skills. My aim of life is to gain knowledge as much as possible and to
+            become a good, and a successful person.
+            <br>
+            <br>
+            <h3 id="cd">Contact details</h3>
+            <br>
+            <ul>
+                <li><b>Phone Number: </b>+91-8177963553</li>
+                <li><b>E-Mail ID: </b>ninad.jamkar405@nmims.edu.in</li>
+                <li><b>LinkedIn: </b><a href="https://www.linkedin.com/in/ninad-jamkar-75205b21a/" target="_blank">Ninad
+                        Jamkar</a></li>
+                <li><b>Instagram: </b><a href="https://www.instagram.com/ninad_45/" target="_blank">ninad_45</a></li>
+                <li><b>Address: </b>Sector 35, Kharghar, Navi Mumbai</li>
+            </ul>
+        </div>
+        <div class="container2">
+            <div class="item" id="item-2">
+                <h3 id="edu">Education</h3>
+                <br>
+                <ul>
+                    <li><b>SVKM's NMIMS STME, Navi Mumbai (2021-2025)</b> : Graduation</li>
+                    <li><b>Santaji Mahavidayalaya, Nagpur (2019-2021)</b> : Junior College (HSC - 85%)</li>
+                    <li><b>Modern School, Nagpur (2008-2019)</b> : High School (CBSE - 84%)</li>
+                </ul>
+            </div>
+            <div class="item" id="item-3">
+                <h3 id="edu">Skills</h3>
+                <br>
+                <ul>
+                    <li><b>Web Development</b> - (HTML, CSS, JavaScript, Bootstrap)</li>
+                    <li><b>Programming languages</b> - (C, C++, Python, JavaScript)</li>
+                    <li><b>Stock Market</b> - (Fundamental Analysis of Stocks, Corporate Finance)</li>
+                </ul>
+            </div>
+            <div class="item" id="item-4">
+                <h3 id="edu">Personal Projects</h3>
+                <ol>
+                    <li><b>Web Development</b>
+                        <br>
+                        <ul>
+                            <li>E-learning Website <a href="http://127.0.0.1:5500/Game%20of%20codes%20.html"
+                                    target="_blank">Game of Codes</a></li>
+                            <li>Bucket list Website <a href="http://127.0.0.1:5500/bucket%20list%20.html"
+                                        target="_blank">Bucket List</a></li>
+                            <li>Resume Website <a href="http://127.0.0.1:5500/A%20resume.html" target="_blank">Ninad's
+                                    Resume</a></li>
+                            <li>Gym Website <a href="http://127.0.0.1:5500/gym.html" target="_blank">Power Fitness</a>
+                            </li>
+                            <li>Catering Website <a href="http://127.0.0.1:5500/Foodify.html"
+                                    target="_blank">Foodify</a></li>
+                        </ul>
+                    </li>
+                    <li><b>C++</b>
+                        <br>
+                        <ul>
+                            <li>University record system</li>
+                            <li>Bank Management system</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="blog">
+        <b>Blog</b> on <b>Information Technology</b> and <b>Financial Literacy</b> - <a href="GOC blog .html"
+            target="_blank">Blog</a>
+    </div>
+    <br>
+    <br>
+    <div class="foot">
+        <footer>
+            <br>
+            <div id="copy">
+                <b>&#169 Ninad Jamkar 2022</b>
+            </div>
+            <br>
+            <div class="foot-img">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"
+                    height="50" width="50" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                    height="50" width="50" />
+                <img src="https://westwind.org/wp-content/uploads/2018/11/facebook-logo-png.png" height="50"
+                    width="50" />
+            </div>
+            <br>
+        </footer>
+    </div>
+</body>
+
+</html>

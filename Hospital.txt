@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alexis Hospital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #head {
+            color: rgb(0, 110, 254);
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #infra {
+            color: black;
+
+        }
+
+        #docs {
+            color: black;
+        }
+
+        #equipments {
+            color: black;
+        }
+
+        .specialities {
+            text-align: center;
+        }
+
+        .WDI {
+            border: 2px solid black;
+            padding-top: 4px;
+            padding-left: 2px;
+            padding-right: 2px;
+            padding-bottom: 4px;
+            background-color: blanchedalmond;
+            width: 500px;
+            margin-left: 300px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .ED {
+            border: 2px solid black;
+            padding-top: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-bottom: 4px;
+            background-color: blanchedalmond;
+            width: 400px;
+            margin-left: 300px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .TME {
+            border: 2px solid black;
+            padding-top: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
+            padding-bottom: 4px;
+            background-color: blanchedalmond;
+            width: 400px;
+            margin-left: 300px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #oc {
+            text-align: center;
+        }
+
+        .why-us h2 {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .why-us h2::after {
+            content: "";
+            width: 120px;
+            height: 3px;
+            display: inline-block;
+            background: #FFC107;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -20px;
+            margin: 0 auto;
+        }
+
+        .why-us .box {
+            padding: 50px 30px;
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.10);
+            transition: 0.5s;
+            position: relative;
+            background-color: #333;
+            max-height: 230px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .why-us .box:hover {
+            padding: 30px 30px 70px 30px;
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.20);
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .why-us .box img {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            transition: all ease 1s;
+        }
+
+        .why-us .box:hover img {
+            opacity: 1;
+        }
+
+        .why-us .box span {
+            display: block;
+            font-size: 56px;
+            font-weight: 700;
+            color: #6b6060;
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            line-height: normal;
+        }
+
+        .why-us .box h4 a {
+            font-size: 24px;
+            font-weight: 600;
+            padding: 0;
+            margin: 20px 0;
+            color: #dadada;
+            text-decoration: none;
+        }
+
+        .why-us .box p {
+            color: #aaaaaa;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .why-us .box:hover span,
+        .why-us .box:hover h4 a,
+        .why-us .box:hover p {
+            color: #fff;
+        }
+
+        #WCU {
+            text-align: center;
+        }
+
+        .car {
+            width: 1200px;
+            justify-content: center;
+            text-align: center;
+            margin-left: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Alexis Hospital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Alexis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Our Consultants</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        <div id="logo">
+            <img src="https://lh3.googleusercontent.com/t95I1uCOZBfFQ-EbGxT2XtfQnKDut3H2BbPvZfnT63SNXkpqi3L-vdB6pvWaTDKYK5Q"
+                width="200" height="200" />
+        </div>
+        <div id="head">
+            <h1>Alexis Hospital</h1>
+            <h2>Partners in good health</h2>
+        </div>
+        <div id="logo">
+            <img src="https://media-exp1.licdn.com/dms/image/C560BAQHyAqgbbmGvNA/company-logo_200_200/0/1565879500189?e=2147483647&v=beta&t=NTzuoMtTbZktaDkNeUPReDxveWfCylq5geN-k1oqnGs"
+                width="200" height="160" />
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="car">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.ucsf.edu/sites/default/files/styles/full_bleed__image/public/2022-05/BCHs_SF_Oak.jpg"
+                            height="600" width="800" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="WDI">
+                                <h2 id="infra">Well Developed Infrastructure</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.studentdoctor.net/wp-content/uploads/2007/10/shutterstock_317578871.png"
+                            height="600" width="800" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="ED">
+                                <h2 id="docs">Experienced Doctors</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/D866/production/_116389355_ambulances.jpg"
+                            height="600" width="800" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div class="TME">
+                                <h2 id="equipments">24 X 7 Ambulance Service</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </button>
+    </div>
+    <br>
+    <div class="specialities">
+        <h1>Leading Multispeciality Hospital In Mumbai</h1>
+        <br>
+        <h1>Our Specialities</h1>
+    </div>
+    <main>
+        <div class="container px-4 py-5" id="featured-3" >
+
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <h1 class="visually-hidden">Features examples</h1>
+                <div class="feature-col feature-col-dark bg-dark ">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3 bg-dark">
+                        <br>
+                        <img src="https://midlandhealthcare.org/wp-content/uploads/2021/06/Cardiology--1024x574.jpg"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Cardiology</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="feature-col feature-col-dark bg-dark">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+                        <img src="https://journalofethics.ama-assn.org/sites/journalofethics.ama-assn.org/files/2018-10/shutterstock_1020156673.jpg"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Organ Transplant</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="feature-col feature-col-dark bg-dark">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmbkU7_MJVLURl0o2KidM_dsl9JDMkwg9MdiT9zt_w-XhWefVmbbE01O75UpKH7_f-F0A&usqp=CAU"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Neurology</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="feature-col bg-dark">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+                        <img src="https://hospital.vallhebron.com/sites/hospital/files/styles/columns_content/public/2021-12/que-cal-portar.jpg?itok=S3ud__ZU"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Maternity</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="feature-col feature-col-dark bg-dark">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary
+                        bg-gradient text-white fs-2 mb-3">
+                        <img src="https://www.comparethemarket.com.au/wp-content/uploads/2020/08/woman-visiting-dentist-to-get-teeth-checked-on-dental-insurance.jpg"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Dental</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+                
+                <div class="feature-col feature-col-dark bg-dark">
+                    <div
+                        class="feature-icon d-inline-flex align-items-center justify-content-center bg-primary bg-gradient text-white fs-2 mb-3">
+                        <img src="https://images.healthshots.com/healthshots/en/uploads/2021/07/16095507/Ayurvedic-herbs-for-mental-health-1.jpg"
+                            height="220" width="340">
+                    </div>
+                    <h2 style="color: whitesmoke">Ayurveda</h2>
+                    <p style="color: whitesmoke">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another
+                        sentence and probably just keep going until we run out of words.</p>
+                    <a href="#" class="icon-link d-inline-flex align-items-center">
+                        Call to action
+                        <svg class="bi" width="1em" height="1em">
+                            <use xlink:href="#chevron-right"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="testimonials testimonials-dark bg-dark">
+        <h1 id="oc" style="color: whitesmoke">Testimonials</h1>
+        <br />
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="https://images.hindustantimes.com/img/2021/05/10/1600x900/amitabh-bachchan-tested-negative-for-covid-19_c4324d6a-03ca-11eb-be8a-af0c9ba615fa_1614577251208_1614577256768_1620636833771.jpg"
+                        class="bd-placeholder-img rounded-circle" width="225" height="200">
+
+                    <h2 class="fw-normal" style="color: whitesmoke">Amithabh Bachchan</h2>
+                    <p style="color: whitesmoke">Clean, pleasant atmosphere, patient friendly staff. I celebrated Diwali Festival here. I feel
+                        like home. The best hospital in Mumbai !!! I pray that this Hospital will continue to provide
+                        medical benefit to the poor.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="https://i.cbc.ca/1.3630991.1530809419!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/dalai-lama.jpg"
+                        class="bd-placeholder-img rounded-circle" width="225" height="200">
+
+                    <h2 class="fw-normal" style="color: whitesmoke">Dalai Lama</h2>
+                    <p style="color: whitesmoke">I would like to thank the Alexis Hospital for the excellent service provided during the medical
+                        check up I have had. I want to thank all concerned. I pray that this Hospital will continue to
+                        provide medical benefit to the poor.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="https://images.indianexpress.com/2021/08/ch1057739.jpg"
+                        class="bd-placeholder-img rounded-circle" width="225" height="200">
+
+                    <h2 class="fw-normal" style="color: whitesmoke">KM Birla</h2>
+                    <p style="color: whitesmoke">I would like to compliment the management and the organization for creating a wonderful
+                        atmosphere of medical proficiency and hope that you will continue to do the good work that you
+                        have set yourselves for the betterment of humanity.</p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+        </div>
+        </div>
+    </main>
+    <hr>
+    <section class="why-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h1 class="mt-5 text-center" id="WCU">Why Choose Us</h1>
+                    <br>
+                    <p>When you choose us, you'll feel the benefit of 10 years' experience of Web Development. Because
+                        we know the digital world and we know that how to handle it. With working knowledge of online,
+                        SEO and social media.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>01</span>
+                        <h4><a href="#">Why Lorem Ipsum</a></h4>
+                        <p>There are many variations of passages of available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-one.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>02</span>
+                        <h4><a href="#">Why do we use it</a></h4>
+                        <p>There are many variations of Lorem Ipsum available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-two.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <div class="box">
+                        <span>03</span>
+                        <h4><a href="#">Can I get some</a></h4>
+                        <p>There are many variations of Lorem Ipsum available, but the majority have suffered alteration
+                            in some form</p>
+                        <img src="/images/image-three.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <footer class="section footer-classic context-dark bg-image" style="background: #343434;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4">
+                        <p style="color: whitesmoke">We are an award-winning Hospital, dedicated to the best result in Health care,</p>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5 style="color: whitesmoke">Contacts</h5>
+                    <dl class="contact-list">
+                        <dt style="color: whitesmoke">Address:</dt>
+                        <dd style="color: whitesmoke">Hiranandani Gardens, Powai, Mumbai</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt style="color: whitesmoke">email:</dt>
+                        <dd><a href="mailto:#" style="color: whitesmoke">Alexis@gmail.com</a></dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt style="color: whitesmoke">phones:</dt>
+                        <dd><a href="tel:#" style="color: whitesmoke">+91-8177963553</a> <span style="color: whitesmoke">or</span> <a href="tel:#" style="color: whitesmoke">+91-9850345869</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                    <h5 style="color: whitesmoke">Links</h5>
+                    <ul class="nav-list">
+                        <li><a href="#" style="color: whitesmoke">About</a></li>
+                        <li><a href="#" style="color: whitesmoke">Projects</a></li>
+                        <li><a href="#" style="color: whitesmoke">Blog</a></li>
+                        <li><a href="#" style="color: whitesmoke">Contacts</a></li>
+                        <li><a href="#" style="color: whitesmoke">Pricing</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="images">
+            <div class="row no-gutters social-container">
+                <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span><img
+                                src="https://westwind.org/wp-content/uploads/2018/11/facebook-logo-png.png" height="50"
+                                width="50" /></span></a></div>
+                <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                                height="50" width="50" /></span></a></div>
+                <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span><img
+                                src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height="50"
+                                width="50" /></span></a></div>
+                <div class="col"><a class="social-inner" href="#"><span
+                            class="icon mdi mdi-youtube-play"></span><span><img
+                                src="https://www.espronceda.net/wp-content/uploads/2021/12/format-twitter-logo-transparent-11549680770lolovrdq8m.png"
+                                height="50" width="50" /></span></a></div>
+            </div>
+        </div>
+        <p class="rights"><span style="color: whitesmoke">© </span><span class="copyright-year" style="color: whitesmoke">2022</span><span> </span><span style="color: whitesmoke">Alexis
+                Hospital</span><span> - </span><span  style="color: whitesmoke">All Rights Reserved.</span></p>
+        <hr>
+    </footer>
+</body>
+
+</html>

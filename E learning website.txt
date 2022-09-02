@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game of Codes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .car {
+            width: 1200px;
+            margin: auto;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .trends {
+            text-align: center;
+        }
+
+        #oc {
+            text-align: center;
+        }
+
+        .rights {
+            text-align: center;
+        }
+
+        .images
+        {
+            display:flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Game of Codes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="GOC blog .html" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="GOC login .html" target="_blank">Login / Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">HTML</a></li>
+                            <li><a class="dropdown-item" href="#">CSS</a></li>
+                            <li><a class="dropdown-item" href="#">Java Script</a></li>
+                            <li><a class="dropdown-item" href="#">C++</a></li>
+                            <li><a class="dropdown-item" href="#">Python</a></li>
+                            <li><a class="dropdown-item" href="#">Java</a></li>
+                            <li><a class="dropdown-item" href="#">Data Science</a></li>
+                            <li><a class="dropdown-item" href="#">Machine Learning </a></li>
+                            <li><a class="dropdown-item" href="#">Artificial intelligence</a></li>
+                            <li><a class="dropdown-item" href="#">AWS - Cloud Computing</a></li>
+                            <li><a class="dropdown-item" href="#">Blockchain Technology</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="alert alert-primary" role="alert">
+        Learn to Code with the world's largest web developer site.
+    </div>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Videos</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Exercises</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Quizes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Certificates</a>
+        </li>
+    </ul>
+    <br />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="car">
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="false">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://www.clariwell.in/resources/best-web-development-course-top-training-institute-in-pune.webp"
+                            height="600" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Full Stack Web Development</h5>
+                            <p>Learn Front-end & Back-end Development</p>
+                            <button type="button" class="btn btn-primary">Overview</button>
+                            <button type="button" class="btn btn-success"> <a class="nav-link" href="GOC webd .html"
+                                    terget="_blank">Learn Now</a></button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://www.vinsys.com/blog/wp-content/uploads/2020/04/A-Compleate-Understanding-of-DS-AI-ML-DL.jpg"
+                            height="600" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Python </h5>
+                            <p>Python for Data Science, Machine Learning & Artificial Intelligence</p>
+                            <button type="button" class="btn btn-primary">Overview</button>
+                            <button type="button" class="btn btn-success">Learn Now</button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://d2908q01vomqb2.cloudfront.net/d435a6cdd786300dff204ee7c2ef942d3e9034e2/2020/04/29/200427_aws_thumb_1024x512_2.jpg"
+                            height="600" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>AWS</h5>
+                            <p>AWS Cloud Computing</p>
+                            <button type="button" class="btn btn-primary">Overview</button>
+                            <button type="button" class="btn btn-success">Learn Now</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </button>
+    </div>
+    <br />
+    <div class="trends">
+        <h1>Latest Technology Trends</h1>
+    </div>
+    <br />
+    <div class="container-1">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">IBM</strong>
+                        <h3 class="mb-0">Cyber Security</h3>
+                        <div class="mb-1 text-muted">Jun 25</div>
+                        <p class="card-text mb-auto">Cyber security is the protection of computer systems and networks
+                            from information disclosure, theft of, or damage to their hardware, software, or electronic
+                            data.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="350" height="250"
+                            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_Cybersecurity_Projects.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">IBM</strong>
+                        <h3 class="mb-0">Internet Of Things (IOT)</h3>
+                        <div class="mb-1 text-muted">Jun 25</div>
+                        <p class="mb-auto">The term IoT, or Internet of Things, refers to the collective network of
+                            connected devices and the technology that facilitates communication between devices and
+                            themselves.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="bd-placeholder-img" width="350" height="250"
+                                src="https://www.iotworldtoday.com/files/2020/06/GettyImages-1150351738.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Google</strong>
+                        <h3 class="mb-0">Big Data</h3>
+                        <div class="mb-1 text-muted">Jun 25</div>
+                        <p class="card-text mb-auto">Big data is a combination of structured, semistructured and
+                            unstructured data collected by organizations that can be mined for information and used for
+                            advanced analytics applications.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img class="bd-placeholder-img" width="350" height="250"
+                            src="https://academy.pinteraktif.com/wp-content/uploads/2021/04/bigstock-Big-Data-Visualization-Abstra-254327212-1.jpeg" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Google</strong>
+                        <h3 class="mb-0">Blockchain Technology</h3>
+                        <div class="mb-1 text-muted">Jun 25</div>
+                        <p class="mb-auto">A Blockchain is a chain of blocks that contain information. The data which is
+                            stored inside a block depends on the type of blockchain.</p>
+                        <a href="#" class="stretched-link">Continue reading</a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="bd-placeholder-img" width="350" height="250"
+                                src="https://www.msrcosmos.com/wp-content/uploads/2021/09/Blockchain-Technology-in-dairy-Industry.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <h1 id="oc">Other Courses</h1>
+    <br />
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="https://www.dummies.com/wp-content/uploads/digital-marketing-concept.jpg"
+                    class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                <h2 class="fw-normal">Digital Marketing</h2>
+                <p>Start your Career with Digital Marketing.</p>
+                <p><a class="btn btn-success" href="GOC dm .html" target="_blank">Know more</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://study.com/cimages/course-image/how-to-make-effective-business-decisions_183986_large.jpg"
+                    class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                <h2 class="fw-normal">Business Analytics</h2>
+                <p>Start your Career with Business Analytics.</p>
+                <p><a class="btn btn-success" href="#">Know more</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFdZU7pdEAWWC4dRqlpbrGhK-JzVs016cT3w&usqp=CAU"
+                    class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                <h2 class="fw-normal">Data Analytics</h2>
+                <p>Start your Career with Data Analytics</p>
+                <p><a class="btn btn-success" href="#">Know more</a></p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+        <div class="container marketing1">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="https://www.financialexpress.com/wp-content/uploads/2022/06/3.jpg"
+                        class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                    <h2 class="fw-normal">Stock Market Fundamentals</h2>
+                    <p>Start investing your valuable money in Stock Market</p>
+                    <p><a class="btn btn-success" href="#">Know more</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="https://connectioncafe.com/wp-content/uploads/2019/08/sales-marketing.jpg"
+                        class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                    <h2 class="fw-normal">Sales and Marketing</h2>
+                    <p>Start your Business by MBA in sales and marketing</p>
+                    <p><a class="btn btn-success" href="#">Know more</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgvgxNZEwpmpmyprq_OpgKMJ3rBVlOQEQzjjPhBnSBziKs7Y3bctlcUWAyEgPTpEgnRzw&usqp=CAU"
+                        class="bd-placeholder-img rounded-circle" width="150" height="150">
+
+                    <h2 class="fw-normal">Law </h2>
+                    <p>Become a lawyer</p>
+                    <p><a class="btn btn-success" href="#">Know more</a></p>
+                </div>
+            </div><!-- /.row -->
+            <br />
+            <hr>
+            <br />
+            <footer class="section footer-classic context-dark bg-image" style="background: #bcbfc6;">
+                <div class="container">
+                    <div class="row row-30">
+                        <div class="col-md-4 col-xl-5">
+                            <div class="pr-xl-4">
+                                <p>We are an award-winning creative website, dedicated to the best result in web design,
+                                    promotion, business consulting, and marketing.</p>
+                                
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Contacts</h5>
+                            <dl class="contact-list">
+                                <dt>Address:</dt>
+                                <dd>Hiranandani Gardens, Powai, Mumbai</dd>
+                            </dl>
+                            <dl class="contact-list">
+                                <dt>email:</dt>
+                                <dd><a href="mailto:#">Gameofcodes@gmail.com</a></dd>
+                            </dl>
+                            <dl class="contact-list">
+                                <dt>phones:</dt>
+                                <dd><a href="tel:#">+91-8177963553</a> <span>or</span> <a
+                                        href="tel:#">+91-9850345869</a>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-4 col-xl-3">
+                            <h5>Links</h5>
+                            <ul class="nav-list">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contacts</a></li>
+                                <li><a href="#">Pricing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="images">
+                <div class="row no-gutters social-container">
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-facebook"></span><span><img
+                                    src="https://westwind.org/wp-content/uploads/2018/11/facebook-logo-png.png"
+                                    height="50" width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-instagram"></span><span><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"
+                                    height="50" width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-twitter"></span><span><img
+                                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height="50"
+                                    width="50" /></span></a></div>
+                    <div class="col"><a class="social-inner" href="#"><span
+                                class="icon mdi mdi-youtube-play"></span><span><img
+                                    src="https://www.espronceda.net/wp-content/uploads/2021/12/format-twitter-logo-transparent-11549680770lolovrdq8m.png"
+                                    height="50" width="50" /></span></a></div>
+                </div>
+                </div>
+                <p class="rights"><span>© </span><span class="copyright-year">2022</span><span> </span><span>Game of
+                        Codes</span><span> - </span><span>All Rights Reserved.</span></p>
+                <hr>
+            </footer>
+</body>
+</html>

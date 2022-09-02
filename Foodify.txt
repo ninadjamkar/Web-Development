@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodify</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        :root {
+            --red: #ff3838;
+        }
+
+        * {
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        *::selection {
+            background: var(--red);
+            color: #fff;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 6rem;
+        }
+
+        body {
+            background: #f7f7f7;
+        }
+
+        section {
+            padding: 2rem 9%;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 3.5rem;
+            padding: 1rem;
+            color: #666;
+        }
+
+        .heading span {
+            color: var(--red);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .8rem 3rem;
+            border: .2rem solid var(--red);
+            color: var(--red);
+            cursor: pointer;
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            margin-top: 1rem;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--red);
+            transition: .3s linear;
+            z-index: -1;
+        }
+
+        .btn:hover::before {
+            width: 100%;
+            left: 0;
+        }
+
+        .btn:hover {
+            color: #fff;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 2rem 9%;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+
+        header .logo {
+            font-size: 2.5rem;
+            font-weight: bolder;
+            color: #666;
+        }
+
+        header .logo i {
+            padding-right: .5rem;
+            color: var(--red);
+        }
+
+        header .navbar a {
+            font-size: 2rem;
+            margin-left: 2rem;
+            color: #666;
+        }
+
+        header .navbar a:hover {
+            color: var(--red);
+        }
+
+        #menu-bar {
+            font-size: 3rem;
+            cursor: pointer;
+            color: #666;
+            border: .1rem solid #666;
+            border-radius: .3rem;
+            padding: .5rem 1.5rem;
+            display: none;
+        }
+
+        .home {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            min-height: 100vh;
+            align-items: center;
+            background: url(../images/home-bg.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home .content {
+            flex: 1 1 40rem;
+            padding-top: 6.5rem;
+        }
+
+        .home .image {
+            flex: 1 1 40rem;
+        }
+
+        .home .image img {
+            width: 100%;
+            padding: 1rem;
+            animation: float 3s linear infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0rem);
+            }
+
+            50% {
+                transform: translateY(3rem);
+            }
+        }
+
+        .home .content h3 {
+            font-size: 5rem;
+            color: #333;
+        }
+
+        .home .content p {
+            font-size: 1.7rem;
+            color: #666;
+            padding: 1rem 0;
+        }
+
+        .speciality .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .speciality .box-container .box {
+            flex: 1 1 30rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            border: .1rem solid rgba(0, 0, 0, .3);
+            cursor: pointer;
+            border-radius: .5rem;
+        }
+
+        .speciality .box-container .box .image {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: -100%;
+            left: 0;
+        }
+
+        .speciality .box-container .box .content {
+            text-align: center;
+            background: #fff;
+            padding: 2rem;
+        }
+
+        .speciality .box-container .box .content img {
+            margin: 1.5rem 0;
+        }
+
+        .speciality .box-container .box .content h3 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .speciality .box-container .box .content p {
+            font-size: 1.6rem;
+            color: #666;
+            padding: 1rem 0;
+        }
+
+        .speciality .box-container .box:hover .image {
+            top: 0;
+        }
+
+        .speciality .box-container .box:hover .content {
+            transform: translateY(100%);
+        }
+
+        .popular .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .popular .box-container .box {
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            border: .1rem solid rgba(0, 0, 0, .3);
+            border-radius: .5rem;
+            text-align: center;
+            flex: 1 1 30rem;
+            position: relative;
+        }
+
+        .popular .box-container .box img {
+            height: 25rem;
+            object-fit: cover;
+            width: 100%;
+            border-radius: .5rem;
+        }
+
+        .popular .box-container .box .price {
+            position: absolute;
+            top: 3rem;
+            left: 3rem;
+            background: var(--red);
+            color: #fff;
+            font-size: 2rem;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+        }
+
+        .popular .box-container .box h3 {
+            color: #333;
+            font-size: 2.5rem;
+            padding-top: 1rem;
+        }
+
+        .popular .box-container .box .stars i {
+            color: gold;
+            font-size: 1.7rem;
+            padding: 1rem .1rem;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+
+        .steps .box {
+            flex: 1 1 25rem;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .steps .box img {
+            border-radius: 50%;
+            border: 1rem solid #fff;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        }
+
+        .steps .box h3 {
+            font-size: 3rem;
+            color: #333;
+            padding: 1rem;
+        }
+
+        .gallery .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .gallery .box-container .box {
+            height: 25rem;
+            flex: 1 1 30rem;
+            border: 1rem solid #fff;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            border-radius: .5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery .box-container .box img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .gallery .box-container .box .content {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 255, 255, .9);
+            padding: 2rem;
+            padding-top: 5rem;
+            text-align: center;
+        }
+
+        .gallery .box-container .box .content h3 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        .gallery .box-container .box .content p {
+            font-size: 1.5rem;
+            color: #666;
+            padding: 1rem 0;
+        }
+
+        .gallery .box-container .box:hover .content {
+            top: 0;
+        }
+
+        .review .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .review .box-container .box {
+            text-align: center;
+            padding: 2rem;
+            border: 1rem solid #fff;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+            border-radius: .5rem;
+            flex: 1 1 30rem;
+            background: #333;
+            margin-top: 6rem;
+        }
+
+        .review .box-container .box img {
+            height: 12rem;
+            width: 12rem;
+            border-radius: 50%;
+            border: 1rem solid #fff;
+            margin-top: -8rem;
+            object-fit: cover;
+        }
+
+        .review .box-container .box h3 {
+            font-size: 2.5rem;
+            color: #fff;
+            padding: .5rem 0;
+        }
+
+        .review .box-container .box .stars i {
+            font-size: 2rem;
+            color: var(--red);
+            padding: .5rem 0;
+        }
+
+        .review .box-container .box p {
+            font-size: 1.5rem;
+            color: #eee;
+            padding: 1rem 0;
+        }
+
+        .order .row {
+            padding: 2rem;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            background: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            border-radius: .5rem;
+        }
+
+        .order .row .image {
+            flex: 1 1 30rem;
+        }
+
+        .order .row .image img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: .5rem;
+        }
+
+        .order .row form {
+            flex: 1 1 50rem;
+            padding: 1rem;
+        }
+
+        .order .row form .inputBox {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .order .row form .inputBox input,
+        .order .row form textarea {
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 1.7rem;
+            color: #333;
+            text-transform: none;
+            border: .1rem solid rgba(0, 0, 0, .3);
+            border-radius: .5rem;
+            width: 49%;
+        }
+
+        .order .row form textarea {
+            width: 100%;
+            resize: none;
+            height: 15rem;
+        }
+
+        .order .row form .btn {
+            background: none;
+        }
+
+        .order .row form .btn:hover {
+            background: var(--red);
+        }
+
+        .footer {
+            background: #000;
+            text-align: center;
+        }
+
+        .footer .share {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer .credit {
+            padding: 2.5rem 1rem;
+            color: #fff;
+            font-weight: normal;
+            font-size: 2rem;
+        }
+
+        .footer .credit span {
+            color: var(--red);
+        }
+
+        #scroll-top {
+            position: fixed;
+            top: -120%;
+            right: 2rem;
+            padding: .5rem 1.5rem;
+            font-size: 4rem;
+            background: var(--red);
+            color: #fff;
+            border-radius: .5rem;
+            transition: 1s linear;
+            z-index: 1000;
+        }
+
+        #scroll-top.active {
+            top: calc(100% - 12rem)
+        }
+
+        .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .loader-container.fade-out {
+            top: -120%;
+        }
+
+        /* media queries  */
+
+        @media(max-width:991px) {
+
+            html {
+                font-size: 55%;
+            }
+
+            header {
+                padding: 2rem;
+            }
+
+            section {
+                padding: 2rem;
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            #menu-bar {
+                display: initial;
+            }
+
+            header .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #f7f7f7;
+                border-top: .1rem solid rgba(0, 0, 0, .1);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+
+            header .navbar.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+
+            header .navbar a {
+                margin: 1.5rem;
+                padding: 1.5rem;
+                display: block;
+                border: .2rem solid rgba(0, 0, 0, .1);
+                border-left: .5rem solid var(--red);
+                background: #fff;
+            }
+
+        }
+
+        @media(max-width:450px) {
+
+            html {
+                font-size: 50%;
+            }
+
+            .order .row form .inputBox input {
+                width: 100%;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <a href="#" class="logo"><i class="fas fa-utensils"></i>Foodify</a>
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#About us">About us</a>
+            <a href="#Speciality">Speciality</a>
+            <a href="#Blog">Blog</a>
+            <a href="#Review">Review</a>
+            <a href="#Order">Order</a>
+        </nav>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>food made with love</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas accusamus tempore temporibus rem amet
+                laudantium animi optio voluptatum. Natus obcaecati unde porro nostrum ipsam itaque impedit incidunt rem
+                quisquam eos!</p>
+            <a href="#" class="btn">order now</a>
+        </div>
+
+        <div class="image">
+            <img src="https://thpcreates.com/wp-content/uploads/2016/04/Beautiful-Bowls-of-Food-028.jpg" height="500" width="650" alt="">
+        </div>
+
+    </section>
+
+    <section class="speciality" id="speciality">
+
+        <h1 class="heading"> our <span>speciality</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img class="image" src="https://i.pinimg.com/originals/1d/35/b1/1d35b1d2ccafe02003eb9dbf005381ee.jpg" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://i.pinimg.com/originals/1d/35/b1/1d35b1d2ccafe02003eb9dbf005381ee.jpg" height="200" width="220" alt="">
+                    <h3>tasty burger</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jghjj2ukbpti9hclnhxl" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jghjj2ukbpti9hclnhxl" height="200" width="220" alt="">
+                    <h3>tasty pizza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://previews.agefotostock.com/previewimage/medibigoff/ef1990473caa7934c8f42343c843390d/esy-054321036.jpg" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://previews.agefotostock.com/previewimage/medibigoff/ef1990473caa7934c8f42343c843390d/esy-054321036.jpg"  height="200" width="220"alt="">
+                    <h3>tasty chinese</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://cdn.shopify.com/s/files/1/0558/1134/2530/files/2_1_x800.jpg?v=1627407452" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://cdn.shopify.com/s/files/1/0558/1134/2530/files/2_1_x800.jpg?v=1627407452" height="200" width="220" alt="">
+                    <h3>cold drinks</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://www.indiafoodnetwork.in/wp-content/uploads/2020/10/mithai.jpg" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://www.indiafoodnetwork.in/wp-content/uploads/2020/10/mithai.jpg" height="200" width="250" alt="">
+                    <h3>tasty sweets</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://i.ndtvimg.com/i/2016-09/breakfast-625_625x350_81473932005.jpg" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://i.ndtvimg.com/i/2016-09/breakfast-625_625x350_81473932005.jpg" height="200" width="250" alt="">
+                    <h3>healty breakfast</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://qph.cf2.quoracdn.net/main-qimg-9041f4aa5d9ccd6730cd66d88b1bc7b4-lq" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-9041f4aa5d9ccd6730cd66d88b1bc7b4-lq" height="200" width="250" alt="">
+                    <h3>tasty Subs</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+            <div class="box">
+                <img class="image" src="https://vismaifood.com/storage/app/uploads/public/c7e/aff/974/thumb__700_0_0_0_auto.jpg" height="200" width="220" alt="">
+                <div class="content">
+                    <img src="https://vismaifood.com/storage/app/uploads/public/c7e/aff/974/thumb__700_0_0_0_auto.jpg" height="200" width="250" alt="">
+                    <h3>tasty Rolls</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda inventore neque amet ipsa
+                        tenetur voluptates aperiam tempore libero labore aut.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- speciality section ends -->
+
+    <!-- popular section starts  -->
+
+    <section class="popular" id="popular">
+
+        <h1 class="heading"> most <span>popular</span> foods </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://b.zmtcdn.com/data/pictures/chains/9/18079789/85b9aa8dbfdfa343c66dd421b13583e7.jpg" alt="">
+                <h3>tasty burger</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://media.karousell.com/media/photos/products/2022/6/13/vintage_korean_cake_1655120192_765c475c_progressive.jpg" alt="">
+                <h3>tasty cakes</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://wallpaperaccess.com/full/4883007.jpg" alt="">
+                <h3>tasty south indian food</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/jfvw5nwrpxcvndlpicmq" alt="">
+                <h3>tasty north indian food</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/10/22/ba/54/the-sinature-thali.jpg" alt="">
+                <h3>tasty maharashtrian food</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://iamahoneybee.files.wordpress.com/2015/07/hard-rock-summer-cocktails.jpg" alt="">
+                <h3>tasty beverages</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://geekrobocook.com/wp-content/uploads/2021/04/Fried-veg-momos.jpg" alt="">
+                <h3>tasty momos</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+            <div class="box">
+                <span class="price"> $5 - $20 </span>
+                <img src="https://i.ytimg.com/vi/aWWF16IkI6Q/maxresdefault.jpg" alt="">
+                <h3>tasty shawarma</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <a href="#" class="btn">order now</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- popular section ends -->
+
+    <!-- steps section starts  -->
+
+    <div class="step-container">
+
+        <h1 class="heading">how it <span>works</span></h1>
+
+        <section class="steps">
+
+            <div class="box">
+                <img src="https://cdn4.vectorstock.com/i/1000x1000/98/03/cartoon-a-traditional-set-fast-food-meal-vector-38239803.jpg" width="250" height="250" alt="">
+                <h3>choose your favorite food</h3>
+            </div>
+            <div class="box">
+                <img src="https://cdn2.vectorstock.com/i/1000x1000/21/11/fast-and-free-delivery-cartoon-vector-11802111.jpg" width="250" height="250" alt="">
+                <h3>free and fast delivery</h3>
+            </div>
+            <div class="box">
+                <img src="https://thumbs.dreamstime.com/b/flat-design-concept-payment-payment-method-option-channe-flat-design-concept-payment-payment-method-option-channel-112982175.jpg" width="250" height="250" alt="">
+                <h3>easy payments methods</h3>
+            </div>
+            <div class="box">
+                <img src="https://t4.ftcdn.net/jpg/02/47/19/91/360_F_247199107_3W9Clvj0lRf2z1g5wx206ybAccczNd9H.jpg" width="250" height="250" alt="">
+                <h3>and finally, enjoy your food</h3>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- steps section ends -->
+
+    <!-- gallery section starts  -->
+
+    <section class="gallery" id="gallery">
+
+        <h1 class="heading"> our food <span> gallery </span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/02/01171421/YFL-Pav-Bhaji-2.jpg" height="200" width="200" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.chefspencil.com/wp-content/uploads/Chole-Bhature.jpg" height="200" width="200" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://i0.wp.com/www.ghezaeshiriin.com/wp-content/uploads/2020/04/img_4492.jpg" height="200" width="200" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Pizza-from-Scratch_EXPS_FT20_8621_F_0505_1_home.jpg" height="200" width="200"  alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://b.zmtcdn.com/data/pictures/chains/8/19631088/bb65f1b6b15dadb05341e7c8a498e647.jpeg?fit=around|750:500&crop=750:500;*,*"  height="200" width="200"  alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://www.kitchensanctuary.com/wp-content/uploads/2020/07/Chicken-Tikka-Skewers-square-FS-77-500x500.jpg" height="200" width="200"  alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://static.toiimg.com/photo/71149941.cms" height="200" width="200" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+            <div class="box">
+                <img src="https://tmbidigitalassetsazure.blob.core.windows.net/rms3-prod/attachments/37/1200x1200/Chocolate-Lover-s-Pancakes_EXPS_TOHCA19_133776_B03_15_3b_rms.jpg" height="200" width="200" alt="">
+                <div class="content">
+                    <h3>tasty food</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti, ipsum.</p>
+                    <a href="#" class="btn">ordern now</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- gallery section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> our customers <span>reviews</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwRTzLIvBnYCr6qrV3tnkhf7PBo860LkjTheZW3pW-Q7EkRkKNsry7oGk9JT72OnXua14&usqp=CAU" alt="">
+                <h3>Jon Snow</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod
+                    ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+            </div>
+            <div class="box">
+                <img src="https://i.insider.com/59a6ef672488493e0f019484?width=1000&format=jpeg&auto=webp" alt="">
+                <h3>Jamie Lannister</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod
+                    ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+            </div>
+            <div class="box">
+                <img src="https://cdn.images.express.co.uk/img/dynamic/entities/590x350/605.jpg" alt="">
+                <h3>Daenerys Targaryen</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti delectus, ducimus facere quod
+                    ratione vel laboriosam? Est, maxime rem. Itaque.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- order section starts  -->
+
+    <section class="order" id="order">
+
+        <h1 class="heading"> <span>order</span> now </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://www.apptunix.com/blog/wp-content/uploads/sites/3/2019/11/How-doordash-make-money.jpg" alt="">
+            </div>
+
+            <form action="">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="name">
+                    <input type="email" placeholder="email">
+                </div>
+
+                <div class="inputBox">
+                    <input type="number" placeholder="number">
+                    <input type="text" placeholder="food name">
+                </div>
+
+                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="order now" class="btn">
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- order section ends -->
+
+    <!-- footer section  -->
+
+    <section class="footer">
+
+        <div class="share">
+            <a href="#" class="btn">facebook</a>
+            <a href="#" class="btn">twitter</a>
+            <a href="#" class="btn">instagram</a>
+            <a href="#" class="btn">pinterest</a>
+            <a href="#" class="btn">linkedin</a>
+        </div>
+
+        <h1 class="credit"> created by <span> Ninad Jamkar </span> | all rights reserved! </h1>
+
+    </section>
+
+    <!-- scroll top button  -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- loader  -->
+    <div class="loader-container">
+        <img src="images/loader.gif" alt="">
+    </div>
+
+    <script>
+        let menu = document.querySelector('#menu-bar');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+
+        }
+
+        window.onscroll = () => {
+
+            menu.classList.remove('fa-times');
+            navbar.classList.remove('active');
+
+            if (window.scrollY > 60) {
+                document.querySelector('#scroll-top').classList.add('active');
+            } else {
+                document.querySelector('#scroll-top').classList.remove('active');
+            }
+
+        }
+
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 3000);
+        }
+
+        window.onload = fadeOut();
+    </script>
+
+</body>
+
+</html>
